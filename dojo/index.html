@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="it">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Convertitore di unità</title>
+
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined" rel="stylesheet" />
+    <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/dojo/1.14.1/dijit/themes/claro/claro.css" />
+    <link href="index.css" rel="stylesheet" />
+  </head>
+
+  <body>
+    <div class="container">
+      <div class="main">
+        <div data-dojo-type="Header"></div>
+        <div data-dojo-type="Selector"></div>
+        <div data-dojo-type="Value" pos="1"></div>
+        <div class="equal-box">=</div>
+        <div data-dojo-type="Value" pos="2"></div>
+        <div data-dojo-type="Footer"></div>
+      </div>
+      <div class="powered-by">
+        App basata su <a href="https://dojotoolkit.org/">Dojo Toolkit</a> <span id="version"></span>
+      </div>
+    </div>
+
+    <script>
+      // Configurazione di Dojo
+      var dojoConfig = {
+        async: true,
+        // Dichiara l'indirizzo di base dei moduli dell'applicazione
+        packages: [
+          {
+            name: "app",
+            location: location.pathname.replace(/\/[^/]*$/, "/")
+          }
+        ]
+      };
+    </script>
+
+    <!-- Caricamento Dojo dal CDN Google -->
+    <script src="https://ajax.googleapis.com/ajax/libs/dojo/1.14.1/dojo/dojo.js"></script>
+
+    <!-- Principali script applicativi, altri moduli e componenti verranno caricati da Dojo quando necessari -->
+    <script src="units.js"></script>
+    <script src="index.js"></script>
+  </body>
+</html>

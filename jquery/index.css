@@ -1,0 +1,128 @@
+input,
+select {
+  width: 100%;
+  box-sizing: border-box;
+}
+
+select {
+  background: #f0f0f0;
+  font-size: 1.1em;
+}
+
+label,
+legend {
+  display: none;
+}
+
+fieldset {
+  border: none;
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  font-family: sans-serif;
+  margin: 2em auto;
+  min-width: 320px;
+  max-width: 800px;
+}
+
+.main {
+  background: white;
+  border: 1px solid gray;
+  border-radius: 4px;
+  padding: 0.2em 0.5em 0.5em 0.5em;
+}
+
+.header-box {
+  text-align: center;
+  font-size: 1.2em;
+  font-weight: bold;
+  margin: 0 0 0.3em 0;
+  padding: 0.2em;
+}
+
+.header-box .icon1 {
+  float: left;
+}
+
+.header-box .icon2 {
+  float: right;
+}
+
+.selector-box {
+  margin-bottom: 1em;
+}
+
+.selector-box select {
+  text-align: center;
+}
+
+.unit-box,
+.equal-box {
+  box-sizing: border-box;
+  float: left;
+}
+
+.unit-box {
+  width: 47%;
+  border: 1px solid black;
+}
+
+.unit-box input {
+  border: none;
+  border-bottom: 1px solid black;
+  font-size: 1.5em;
+  text-align: center;
+}
+
+.unit-box input.error {
+  color: red;
+}
+
+.unit-box select {
+  border: none;
+  text-align: center;
+}
+
+.equal-box {
+  font-size: 2em;
+  text-align: center;
+  width: 6%;
+}
+
+.footer-box {
+  clear: both;
+  padding-top: 0.5em;
+}
+
+#message .material-icons-outlined {
+  font-weight: bold;
+}
+
+#message.warning_amber .material-icons-outlined {
+  color: red;
+}
+
+#message span {
+  margin-right: 6px;
+  vertical-align: middle;
+}
+
+.powered-by {
+  margin-top: 0.5em;
+  text-align: right;
+}
+
+@media only screen and (max-width: 640px) {
+  .container {
+    margin-left: 0;
+    margin-right: 0;
+    width: 100%;
+  }
+
+  .equal-box,
+  .unit-box {
+    width: 100%;
+  }
+}

@@ -1,0 +1,46 @@
+doctype html
+html
+  head
+    meta(charset="utf-8")
+    meta(name="viewport" content="width=device-width, initial-scale=1")
+    title Convertitore di unità
+    style
+      include index.css
+
+  body
+    div(class="container")
+      div(class="main")
+        form(action="/convert" method="POST")
+          label Converti quantità:
+            input(name="value", value=(value || 1))
+
+          label Da:
+            select(name="from")
+              each option, index in options
+                option(value=index, selected=(index===from))= option
+
+          label A:
+            select(name="to")
+              each option, index in options
+                option(value=index, selected=(index===to))= option
+
+          input(type="hidden", name="type", value=type)
+
+          div(class="button-box")
+            button(type="submit") Converti
+            a(href="/") &#x2190; Indietro
+
+          if result
+            if result.error
+              div(class="error")= result.error
+            else 
+              div(class="result")
+                span(class="value")= result.from.value
+                span(class="unit")= result.from.unit
+                span(class="separator") =
+                span(class="value")= result.to.value
+                span(class="unit")= result.to.unit
+          else if unit.info
+            div(class="info")!= unit.info
+
+

@@ -1,0 +1,28 @@
+doctype html
+html
+  head
+    meta(charset="utf-8")
+    meta(name="viewport" content="width=device-width, initial-scale=1")
+    title Convertitore di unità
+    style
+      include index.css
+
+  body
+    div(class="container")
+      div(class="main")
+        form(action="/convert" method="POST")
+          div(class="header-box")
+            div(class="title") Converti
+
+          div(class="selector-box")
+            select(id="type-selector", name="type", aria-label="Tipo di unità di misura")
+              option(value="area") Area
+              option(value="length") Lunghezza
+              option(value="mass") Massa
+              option(value="temperature") Temperatura
+              option(value="currency") Valuta
+              option(value="speed") Velocità
+              option(value="volume") Volume
+          
+          div(class="button-box")
+            button Continua &#x2192;

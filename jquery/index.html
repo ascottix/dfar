@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="it">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Convertitore di unità</title>
+
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined" rel="stylesheet" />
+    <link href="index.css" rel="stylesheet" />
+  </head>
+
+  <body>
+    <div class="container">
+      <div class="main">
+        <!-- Intestazione e icone -->
+        <h1 class="header-box">
+          <div class="icon1"></div>
+          <div class="icon2"></div>
+          <div class="title">Converti</div>
+        </h1>
+
+        <!-- Categoria -->
+        <div class="selector-box">
+          <label for="type-selector">Tipo di unità di misura</label>
+          <select id="type-selector">
+            <option value="area">Area</option>
+            <option value="length">Lunghezza</option>
+            <option value="mass">Massa</option>
+            <option value="temperature">Temperatura</option>
+            <option value="currency">Valuta</option>
+            <option value="speed">Velocità</option>
+            <option value="volume">Volume</option>
+          </select>
+        </div>
+
+        <!-- Primo valore -->
+        <div class="unit-box unit1-box">
+          <fieldset name="value1">
+            <legend>Scelta del primo valore e della corrispondente unità di misura</legend>
+            <label for="value1">Primo valore</label>
+            <input type="text" id="value1" />
+            <label for="unit1">Unità del primo valore</label>
+            <select id="unit1"></select>
+          </fieldset>
+        </div>
+
+        <!-- Separatore -->
+        <div class="equal-box">=</div>
+
+        <!-- Secondo valore -->
+        <div class="unit-box unit2-box">
+          <fieldset name="value2">
+            <legend>Scelta del secondo valore e della corrispondente unità di misura</legend>
+            <label for="value2">Secondo valore</label>
+            <input type="text" id="value2" />
+            <label for="unit2">Unità del secondo valore</label>
+            <select id="unit2"></select>
+          </fieldset>
+        </div>
+
+        <!-- Messaggi e informazioni aggiuntive -->
+        <div class="footer-box">
+          <div id="message"></div>
+        </div>
+      </div>
+
+      <div class="powered-by">App basata su jQuery <span id="version"></span></div>
+    </div>
+
+    <script
+      src="https://code.jquery.com/jquery-3.6.0.min.js"
+      integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+      crossorigin="anonymous"
+    ></script>
+    <script src="units.js"></script>
+    <script src="index.js"></script>
+  </body>
+</html>

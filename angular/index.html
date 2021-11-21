@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="it">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Convertitore di unità</title>
+
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined" rel="stylesheet" />
+    <link href="index.css" rel="stylesheet" />
+  </head>
+  <body>
+    <form class="container" ng-app="app" ng-controller="app">
+      <div class="main">
+        <app-header></app-header>
+        <app-selector></app-selector>
+        <app-value state="state" pos="1"></app-value>
+        <app-div class="equal-box">=</app-div>
+        <app-value state="state" pos="2"></app-value>
+        <app-footer error="{{state.error}}" info="{{state.data.info}}"></app-footer>
+      </div>
+      <div class="powered-by">
+        App basata su
+        <a href="https://angularjs.org/">AngularJS</a> {{angularVersion}}
+      </div>
+    </form>
+
+    <!-- Caricamento di AngularJS dal CDN Google -->
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.2/angular.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.2/angular-sanitize.js"></script>
+
+    <!-- Caricamento app e componenti -->
+    <script src="app.js"></script>
+    <script src="units.js"></script>
+    <script src="src/footer.js"></script>
+    <script src="src/header.js"></script>
+    <script src="src/selector.js"></script>
+    <script src="src/value.js"></script>
+  </body>
+</html>
